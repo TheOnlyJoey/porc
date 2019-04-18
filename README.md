@@ -28,14 +28,11 @@ Options include loading audio files, real time microphone capture, EQ preset exp
 
 # When not using GUI
 
-porc.py [-h] [--mixed] [-t FILE] [-n NTAPS] [-o OPFORMAT] input_file output_file
+main.py [-h] [--mixed] [-t FILE] [-n NTAPS] [-o OPFORMAT] input_file output_file
 
-    python porc.py -t tact30f.txt -n 6144 -o bin l48.wav leq48.bin
+    python3 main.py -t tact30f.txt -n 6144 -o bin l48.wav leq48.bin
 
 Use the -h flag for help!
-
-PORC has been tested successfully on both Linux and Windows 7 with Python 2.7. Linux depenency 
-install is fairly straightforward. Windows install packages are available for all dependencies.
 
 Target Response
 ===============
@@ -60,7 +57,7 @@ easily do this with Audacity or REQ.
 
 Example:
 
-	python porc.py --mixed -t tact30f.txt -n 6144 -o bin l48.wav leq48.wav
+	python3 main.py --mixed -t tact30f.txt -n 6144 -o bin l48.wav leq48.wav
 	
 Have some patience with this method. The convolution takes a few CPU cycles.
 
