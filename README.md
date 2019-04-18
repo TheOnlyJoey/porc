@@ -1,39 +1,13 @@
-Python Open Room Correction (PORC)
-==================================
+Shenanigans BeardComb - Analyzer
+================================
 
-PORC now includes mixed-phase compensation (see below)!
 
-DSP Loudspeaker-Room correction filter wizard; transfer function modeling and equalization 
-by fixed-pole parallel filters. Algorithm ported to Python by Mason A. Green, based on the work 
-of Dr. Balazs Bank: http://home.mit.bme.hu/~bank/parfilt/
-
-More details about Dr. Bank's parallel filter can be found in the papers:
-
-    Balazs Bank, "Perceptually Motivated Audio Equalization Using Fixed-Pole Parallel
-    Second-Order Filters," IEEE Signal Processing Letters, 2008.
-
-http://www.acoustics.hut.fi/go/spl08-parfilt
-
-    Balazs Bank, "Direct Design of Parallel Second-order Filters for
-    Instrument Body Modeling," International Computer Music Conference,
-    Copenhagen, Denmark, Aug. 2007.
-
-http://www.acoustics.hut.fi/go/icmc07-parfilt
-    
-Mixed-Phase Compensation references:
-
-	Alberto Carini, et al, "Mixed Time-Frequency approach for Multipoint
-	Room Response Equalization," AES 45th International Conference, 2012
-	
-	Defrance & Polak, "Measuring the mixing time in auditoria," Acoustics
-	Paris 2008
-	
+Shenanigans BeardComb - Analyzer is based on the work from Python Open Room Correction (PORC)
 Required Python dependencies:
 
-    1) Python 2.7
+    1) Python 3.6
     2) Scientific Python: SciPy, Numpy, & Matplotlib
-
-The easiest install method on Windows is simply to install the continuum.io Anaconda package.
+    3) UI: kivy, kivy-garden (graph, matplotlib)
 
 Measurement
 ===========
@@ -45,6 +19,14 @@ http://www.hometheatershack.com/roomeq/
 
 Usage
 =====
+
+# When using GUI
+
+In development.
+Options include loading audio files, real time microphone capture, EQ preset export, png captures and mic/speaker/room preset files.
+
+
+# When not using GUI
 
 porc.py [-h] [--mixed] [-t FILE] [-n NTAPS] [-o OPFORMAT] input_file output_file
 
@@ -99,16 +81,3 @@ OpenDRC Convolution
 ===================
 
 Use -o bin flag to set binary 32bit IEEE floating point mono file format output for OpenDRC.
-
-
-TODO
-====
-
-	Implement algo to automatically remove leading silence (zeros) from RIR.
-	Add a GUI Frontend (pretty interactive graphs, drawing target curve, etc...)
-	Update this page with better documentation!
-
-Contact
-=======
-
-Complaints, suggestions, bugfixes: mason dot green at gmail
