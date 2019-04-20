@@ -39,7 +39,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.popup import Popup
 
 #Audio
-import audiostream
+from audiostream import *
 
 # PORC source files
 from parfiltid import parfiltid
@@ -325,6 +325,10 @@ uiroot = Builder.load_string("""
 				root.dismiss()
 				app.export_png()
 		Button:
+			text: "Debug (Sweeptest)"
+			on_press:
+				app.sinewave()
+		Button:
 			text: "Back"
 			on_press: root.dismiss()
 		Button:
@@ -417,6 +421,10 @@ class BoxLayoutApp(App):
 		print("exportinglol")
 		app = App.get_running_app()
 		app.root.ids.plots.content.children[0].export_to_png('test_graph.png')
+
+	def sinewave(self):
+		ess,inv = generate_sweeps(5)
+		playback_audio(ess)
 
 def main():	
 	print()
