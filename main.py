@@ -38,6 +38,9 @@ from kivy.garden.matplotlib.backend_kivyagg import FigureCanvasKivyAgg
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.popup import Popup
 
+#Audio
+import audiostream
+
 # PORC source files
 from parfiltid import parfiltid
 from tfplot import tfplot, tfplots, debug_log_plot
